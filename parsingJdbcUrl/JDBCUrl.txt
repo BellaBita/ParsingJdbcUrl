@@ -1,0 +1,56 @@
+#jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+#jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;
+#jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos 
+#
+#jdbc:mysql://localhost:3306/dbname
+#jdbc:mysql:loadbalance://localhost:3306,localhost:3310/test?loadBalanceConnectionGroup=first&ha.enableJMX=true
+#jdbc:mysqlx://johndoe:secret@_mysql._tcp.mycompany.local/db?xdevapi.dns-srv=true
+#jdbc:mysqlx+srv://johndoe:secret@_mysql._tcp.mycompany.local/db?xdevapi.dns-srv=false 
+##jdbc:mysql:replication://[source host][:port],[replica host 1][:port][,[replica host 2][:port]]...[/[database]][?propertyName1=propertyValue1[&propertyName2=propertyValue2]...]
+##jdbc:mysql:replication://address=(type=source)(host=source1host),address=(type=source)(host=source2host),address=(type=replica)(host=replica1host)/database
+#
+#jdbc:mariadb://100.100.100.7:3306/dbname
+#
+
+jdbc:oracle:thin:@localhost:1521:xe
+jdbc:oracle:thin:@(DESCRIPTION=(FAIL_OVER=ON)(LOAD_BALANCE=ON)(ADDRESS_LIST=(ADDRESS = (PROTOCOL = TCP) (HOST = 1.2.3.4) (PORT = 1521))(ADDRESS = (PROTOCOL = TCP) (HOST = 1.2.3.5) (PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ZCGS)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRY=180)(DELAY=5))))
+jdbc:oracle:oci:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=dlsun242) (PORT=5521))(CONNECT_DATA=(SERVICE_NAME=bjava21)))
+jdbc:oracle:oci:@//example.com:5521:bjava21
+jdbc:oracle:oci8:@ORA8i_alias
+jdbc:oracle:oci:@//example.com:5521/bjava21
+
+
+jdbc:tibero:thin:@192.168.64.128:8629
+jdbc:tibero:thin:@(DESCRIPTION=(LOAD_BALANCE=ON)(FAILOVER=ON)(DATABASE_NAME=trunk)(ADDRESS_LIST= (ADDRESS=(HOST=192.1.1.xxx)(PORT=15693))(ADDRESS=(HOST=192.1.1.xxx)(PORT=15690))))
+
+# jdbc:postgresql:database_name 
+# jdbc:postgresql://host/database_name 
+# jdbc:postgresql://host:port/database_name
+#포스트그레스의 디폴트 주소는 localhost(127.0.0.1) ,  디폴트 포트는 5432 
+#
+#- DB2 JDBC Type 2 Driver : jdbc:db2:db_name
+#- DB2 JDBC Type 3 Driver : jdbc:db2://host_name:50000/db_name
+#- Universal JDBC Type 2 Driver : jdbc:db2:sample
+#- Universal JDBC Type 4 Driver : jdbc:db2://host_name:50000/db_name
+#[출처] jdbc db2 connection example, 자바 DB2 접속 예제|작성자 네오 에이치
+#jdbc:db2:db_name
+#jdbc:db2://host_name:50000/db_name
+#
+##jdbc:sqlite:sample.db
+##jdbc:sqlite:C:/sqlite/db/chinook.db
+##jdbc:sqlite::memory:
+#
+#jdbc:hsqldb:hsql://localhost/testdb
+#jdbc:hsqldb:hsql://localhost:9001/testdb
+#jdbc:hsqldb:hsqls://localhost:9001/testdb
+#jdbc:hsqldb:http://localhost:9001/testdb
+#jdbc:hsqldb:https://localhost:9001/testdb
+#jdbc:hsqldb:file:C:/data/mydb
+#jdbc:hsqldb:mem:accounts
+#
+#jdbc.url=jdbc:Altibase://192.168.1.35:36492/mydb
+#jdbc:cubrid:localhost:33000:demodb:::
+#jdbc:cubrid:localhost:demodb:::
+#jdbc:CUBRID:nodeA_broker:33000:testdb:::?charSet=utf-8&altHosts=nodeB_broker:33000
+#jdbc:cubrid:<host>:<port>:<db-name>:[user-id]:[password]:[?<property> [& <property>] ... ]
+##jdbc:CUBRID:[마스터 ip]:33000:[dbName]:::?charset=utf8&amp;altHosts=[슬레이브 ip]:33000
