@@ -54,3 +54,6 @@ jdbc:tibero:thin:@(DESCRIPTION=(LOAD_BALANCE=ON)(FAILOVER=ON)(DATABASE_NAME=trun
 #jdbc:CUBRID:nodeA_broker:33000:testdb:::?charSet=utf-8&altHosts=nodeB_broker:33000
 #jdbc:cubrid:<host>:<port>:<db-name>:[user-id]:[password]:[?<property> [& <property>] ... ]
 ##jdbc:CUBRID:[마스터 ip]:33000:[dbName]:::?charset=utf8&amp;altHosts=[슬레이브 ip]:33000
+
+jdbc.url=jdbc:Altibase://192.168.1.35:36492/mydb
+#AlternateServers=(192.168.1.35:21129)&amp;
